@@ -11,17 +11,20 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-/* const titleCased = () => {
-  return tutorials.map((tutorial,context)=>{
-    const p = tutorial.split(' ').map(word=>word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
-    console.log(p)
-    context.push(p)
+const titleCased = () => {
+  return tutorials.map((tutorial)=>{ 
+    const words = tutorial.split(" ")
+    const capitalizedWords = words.map((cap)=>{
+        return cap.charAt(0).toUpperCase() + cap.slice(1)
+    })
+    const result = capitalizedWords.join(" ")
+    return result
   })
 }
 
-console.log(titleCased()) */
+console.log(titleCased()) 
 
- 
+ /* 
 const t = 'what does the this keyword mean?'
 
 const question1 = t.split(" ").toString().replace(/^./, t[0].toUpperCase())
@@ -54,4 +57,4 @@ for(let i=0;i<tutorials.length;i++){
   
 }
 console.log(array) */
-console.log(question1)
+//console.log(question1)
